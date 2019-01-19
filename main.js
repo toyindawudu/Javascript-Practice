@@ -41,4 +41,42 @@ console.log(titiOlder);
 
 
 //typeof operator
+console.log(typeof titiOlder);
+console.log(typeof ageTiti);
+console.log (typeof job);
 
+//Operator precedence 
+
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+
+//Multiple operators
+var isFullAge = now - yearJohn >= fullAge; // true
+console.log(isFullAge);
+
+//Groupings
+var ageJohn = now - yearJohn;
+var ageRichard = 31;
+var average = (ageJohn + ageRichard) / 2;
+
+console.log(average);
+
+//Multiple assignments
+
+//Variable Declaration
+var markMass, johnMass, markHeight, johnHeight;
+markMass= 80;
+johnMass = 83;
+
+markHeight = 1.98;
+johnHeight = 1.95;
+
+var markBmi = markMass / (markHeight * markHeight);
+var johnBmi = johnMass / (johnHeight * johnHeight);
+
+
+var isMarkBmiHigher = markBmi > johnBmi
+
+console.log(markBmi, johnBmi);
+console.log('Is Mark\'s BMI higher than John\'s? ' + isMarkBmiHigher);
