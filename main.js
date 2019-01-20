@@ -51,20 +51,20 @@ var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
 
-//Multiple operators
+// Multiple operators
 var isFullAge = now - yearJohn >= fullAge; // true
 console.log(isFullAge);
 
-//Groupings
+// Groupings
 var ageJohn = now - yearJohn;
 var ageRichard = 31;
 var average = (ageJohn + ageRichard) / 2;
 
 console.log(average);
 
-//Multiple assignments
+// Multiple assignments
 
-//Variable Declaration
+// Variable Declaration
 var markMass, johnMass, markHeight, johnHeight;
 markMass= 80;
 johnMass = 83;
@@ -91,3 +91,77 @@ if (maritalStatus === 'married') {
 } else {
   console.log(firstName + ' will hopefully be married soon!');
 }
+
+var isMarried = true; 
+
+if (maritalStatus) {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will hopefully be married soon!');
+}
+
+
+var markMass, johnMass, markHeight, johnHeight;
+markMass= 70;
+johnMass = 83;
+
+markHeight = 1.98;
+johnHeight = 1.95;
+
+var markBmi = markMass / (markHeight * markHeight);
+var johnBmi = johnMass / (johnHeight * johnHeight);
+
+
+if (markBmi > johnBmi) {
+  console.log ('Mark is heavier than John')
+} else 
+  console.log ('Mark weighs less than John');
+
+
+// Boolean logic
+
+var firstName = 'John'
+var age ='16';
+
+if (age < 13) {
+  console.log(firstName + ' is a boy.');
+} else if(age<=18 && age >= 13) {//Between 13 and 18
+  console.log(firstName + ' is a teenager.');
+} else {
+  console.log (firstName + ' is a Man.');
+}
+
+
+// The Ternary Operator and Switch Statements - This is an alternative way of writing conditional statements
+var firstName = 'John';
+var age = 33;
+
+age >= 18 ? console.log (firstName + ' drinks beer. ')
+: console.log(firstName + ' drinks juice. ');
+
+var drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
+
+
+// Switch statements
+
+var job = 'Policeman';
+switch (job) {
+  case 'teacher':
+    console.log (firstName + ' teaches kids how to code');
+    break;
+  case 'driver':
+    console.log (firstName + ' drives an uber in London');
+    break;
+  case 'designer':
+    console.log (firstName + ' designs beautiful websites');
+    break;
+  default: 
+    console.log (firstName + ' does something else');
+}
+
+
+// Three ways you can write consditional statements
+// If/ else 
+// Ternary operators 
+// Switch statements
