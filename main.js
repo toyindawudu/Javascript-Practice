@@ -165,3 +165,110 @@ switch (job) {
 // If/ else 
 // Ternary operators 
 // Switch statements
+
+
+/* Truthy and Falsy values and equality operators
+
+  Falsy values: undefined, null, 0, '', NaN
+  Truthy values: NOT Falsy values
+
+ */
+
+
+var height;
+
+height = 0;
+
+if (height || height === 0)  {
+  console.log('Variable is defined')
+} else {
+  console.log('Variable has not been defined')
+}
+
+
+var teamJohn = (89 + 120 +103) / 3;
+var teamMike = (116 + 94 + 123) / 3;
+var teamMary = (97 + 134 + 105) / 3;
+
+console.log(teamJohn);
+console.log(teamMike);
+console.log(teamMary);
+
+if ( teamJohn > teamMike && teamJohn > teamMary){
+  console.log ('John\'s team wins with an average score of ' + teamJohn)
+} else if (teamMike > teamJohn && teamMike > teamMary) {
+  console.log('Mike\'s team wins with an average score of ' + teamMike)
+} else if ( teamMary > teamJohn && teamMary > teamMike) {
+  console.log ('Mary\'s team wins with an average score of ' + teamMary)
+} else  {
+  console.log ('There\'s a draw')
+}
+
+/* if (teamJohn> teamMike) {
+  console.log ('John\'s team wins with an average score of ' + teamJohn);
+} else if (teamMike > teamJohn) {
+    console.log('Mike\'s team wins with an average score of ' + teamMike);
+} else {
+  console.log ('There\'s a draw')
+} */
+
+
+/* Functions */
+
+function calculateAge (birthYear) {
+  return 2018 - birthYear;
+}
+
+var ageToyin = calculateAge(1986);
+var ageTiti = calculateAge(1981);
+var ageTosin = calculateAge(1986);
+var ageMum = calculateAge(1950);
+console.log(ageToyin);
+console.log(ageTiti);
+console.log(ageTosin);
+console.log(ageMum);
+
+function calculateRetirement (year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+
+  if (retirement > 0){
+    console.log (firstName + ' retires at ' + retirement + ' years');
+  } else {
+    console.log (firstName + ' is already retired ');
+  }
+  
+}
+
+calculateRetirement(1986, 'Toyin');
+calculateRetirement(1981, 'Titi');
+calculateRetirement(1986, 'Tosin');
+calculateRetirement(1950, 'Mum');
+
+/* Function Statements and Expressions */ 
+
+// Function declaration
+function whatDoYouDo (job, firstName) {
+};
+
+//Function Expression
+var whatDoYouDo = function(job, firstName){
+  switch (job) {
+    case 'teacher':
+    return firstName + ' teaches kids mathematics';
+
+    case 'driver':
+    return firstName + ' teaches kids how to drive';
+
+    case 'designer': 
+    return firstName + ' teaches kids how to design';
+
+    default:
+    return firstName + ' has another job';
+  }
+}
+
+console.log (whatDoYouDo ('designer', 'Sarah'));
+console.log (whatDoYouDo ('teacher', 'John'));
+console.log (whatDoYouDo ('pilot', 'Jane'));
+console.log (whatDoYouDo ('retired', 'Frank'));
