@@ -272,3 +272,74 @@ console.log (whatDoYouDo ('designer', 'Sarah'));
 console.log (whatDoYouDo ('teacher', 'John'));
 console.log (whatDoYouDo ('pilot', 'Jane'));
 console.log (whatDoYouDo ('retired', 'Frank'));
+
+//Array
+
+// Initialising new array
+var names = ['Toyin', 'Titi', 'Tosin', 'Josiah', 'George'];
+var years = new Array (1986, 1981, 1986, 2017,);
+
+// Printing to console
+console.log (names[1] + ' loves me!');
+console.log (names.length);
+
+//Mutating the Array
+names[1] = 'Mark';
+console.log (names[1] + ' loves me!');
+names[names.length] = 'Bisi';
+console.log (names, names.length);
+
+//Different data types
+var toyin = ['Toyin', 'Dawudu', 32, 'Developer'];
+
+//Adding to the array
+toyin.push('Nigerian'); // add to the end of the arrray
+toyin.unshift('Mr.'); // add it to the beginning of the array
+
+//Removes from the array
+toyin.pop(); // removes the last element from the array
+toyin.shift (); //removes the first element from the array
+
+console.log(toyin);
+
+
+toyin.indexOf(32);
+console.log(toyin.indexOf(34)); // This is usually use to test if an element is present in an array
+
+// An example of the Test 
+
+var isDeveloper = toyin.indexOf('Developer') === -1 ? 'Toyin is NOT a Developer' : 'Toyin IS a Developer';
+console.log (isDeveloper);
+
+
+//Coding Challenge 3 
+
+// intialise the restaurant variable
+var restaurantBills;
+
+// Create an array for the restaurant bills
+restaurantBills = [124, 48, 268]
+
+// Create function to calculate tips
+function tipCalculator (bill) {
+if (bill<50) {
+  tip = ((20/100) * bill);
+  return tip;
+} else if (bill >= 50 && bill <= 200) {
+  tip = ((15/100) * bill);
+  return tip;
+} else {(tip = (.10 * bill));
+  return tip;
+}}
+
+
+//Calculate the individual tips for the restuarants and create an array
+
+var Tips = [tipCalculator(restaurantBills[0]),tipCalculator(restaurantBills[1]),tipCalculator(restaurantBills[2])];
+
+
+
+
+console.log(Tips[0],Tips[1],Tips[2]);
+console.log((restaurantBills[0]+Tips[0]), (restaurantBills[1]+Tips[1]), (restaurantBills[2]+Tips[2]));
+
