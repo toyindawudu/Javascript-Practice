@@ -337,9 +337,65 @@ if (bill<50) {
 
 var Tips = [tipCalculator(restaurantBills[0]),tipCalculator(restaurantBills[1]),tipCalculator(restaurantBills[2])];
 
-
-
-
 console.log(Tips[0],Tips[1],Tips[2]);
 console.log((restaurantBills[0]+Tips[0]), (restaurantBills[1]+Tips[1]), (restaurantBills[2]+Tips[2]));
 
+/* Objects and properties */
+
+//Object literal
+var toyin = {
+  firstName:'Toyin',
+  lastName: 'Dawudu',
+  birthYear: 1986,
+  family: ['Josiah', 'Titilola'],
+  job: 'Front-end Developer',
+  isMarried: true
+};
+
+console.log(toyin.lastName);
+console.log(toyin['lastName']);
+
+var x = 'birthYear';
+console.log(toyin[x]);
+toyin.isMarried = false
+console.log(toyin.isMarried);
+
+//New Object literal
+var titi = new Object();
+titi.name = 'Titi';
+titi.job = 'Theatre';
+titi.birthYear = 1981;
+titi.birthMonth = 'September';
+titi.lastName = 'Dawudu';
+
+console.log(titi);
+
+// Objects and Methods
+
+var toyin = {
+  firstName:'Toyin',
+  lastName: 'Dawudu',
+  birthYear: 1986,
+  family: ['Josiah', 'Titilola'],
+  job: 'Front-end Developer',
+  isMarried: true,
+  calcAge: function() {
+    this.age = 2018 - this.birthYear; // This creates a new attribute of 'age' of age in the toyin object
+  }
+};
+
+toyin.calcAge()
+console.log(toyin);
+
+// Coding Challenge #4
+
+var mark = {
+  firstName: 'Mark',
+  mass:70,
+  height:1.89,
+  calcBmi: function() {
+    this.bmi = (this.mass / (this.height * this.height));
+  }
+};
+
+console.log(mark);
