@@ -433,6 +433,33 @@ if (john.bmi > mark.bmi) {
 
 //for (initialisation,condition that is iterated, and the counter)
 
-for (var i = 0; i < 10; i++){
-  console.log(i);
+// for (var i = 0; i < 10; i++){
+//   console.log(i);
+// }
+
+// for (var i = 0; i <= 30; i++) {
+//   console.log (i);
+// }
+
+// var toyin = ['Toyin', 'Dawudu', 32, 1986, 'Developer', 'Nigerian', 'Husband'];
+
+// for (var i = 0; i < toyin.length; i++) {
+//   console.log (toyin [i]);
+// }
+
+// // While loop
+
+// var i = 0;
+// while (i < toyin.length) {
+//   console.log (toyin[i]);
+//   i++;
+// }
+
+//continue and break statements
+
+var toyin = ['Toyin', 'Dawudu', 32, 1986, 'Developer', 'Nigerian', 'Husband'];
+
+for (var i = 0; i < toyin.length; i++) {
+  if (typeof toyin[i] !== 'string') continue
+  console.log (toyin [i]);
 }
