@@ -431,7 +431,7 @@ if (john.bmi > mark.bmi) {
 
 //For loop
 
-//for (initialisation,condition that is iterated, and the counter)
+//for (initialisation, condition that is iterated, and the counter)
 
 // for (var i = 0; i < 10; i++){
 //   console.log(i);
@@ -455,13 +455,47 @@ if (john.bmi > mark.bmi) {
 //   i++;
 // }
 
-//continue and break statements
+// Continue and break statements
 
-var toyin = ['Toyin', 'Dawudu', 32, 1986, 'Developer', 'Nigerian', 'Husband'];
+var toyin = ['Toyin', 'Dawudu', 'Developer', 32, 1986, 'Nigerian', 'Husband'];
 
+// Continue 
 for (var i = 0; i < toyin.length; i++) {
-  if (typeof toyin[i] !== 'string') continue
+  if (typeof toyin[i] !== 'string') continue // This ignores and continue past data types that aren't Strings 
   console.log (toyin [i]);
 }
 
-console.log(toyin);
+//Break
+
+for (var i = 0; i < toyin.length; i++) {
+  if (typeof toyin[i] !== 'string') break // When it comes across a data type that it's a string, it doesn't print anything, instead, it exists. 
+  console.log (toyin [i]);
+}
+
+// Looping backwards
+for (var i = toyin.length - 1; i >= 0; i--) {
+  console.log(toyin[i]);
+}
+
+// Coding Challenge 5 
+
+
+// var johnFamily;
+// var johnFamilyTips[];
+// var johnBills[];
+
+// johnBills = [124, 48, 268, 180, 42];
+
+// for ( var i = 0; i >= johnBills.length; i++) {
+// return tips;
+// }
+// console.log(johnBills);
+
+var john = {
+  bills: [124, 48, 268, 180, 42],
+  calcTips: []
+  tips: [],
+  finalValues: [];
+}
+
+console.log(john);
