@@ -391,11 +391,48 @@ console.log(toyin);
 
 var mark = {
   firstName: 'Mark',
+  lastName: 'Miller',
   mass:70,
   height:1.89,
-  calcBmi: function() {
-    this.bmi = (this.mass / (this.height * this.height));
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   }
 };
 
-console.log(mark);
+var john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+}
+
+// This returns the BMI calculation from the above function
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark, john);
+
+//Condition to see who has a higher BMI
+
+if (john.bmi > mark.bmi) {
+  console.log(john.firstName + ' has a higher BMI')
+} else if (mark.bmi > john.bmi) {
+  console.log(mark.firstName + ' has a higher BMI')
+} else {
+  console.log ('They have the same');
+}
+
+// Loops and iterations - There are three For while, While, For loop 
+
+//For loop
+
+//for (initialisation,condition that is iterated, and the counter)
+
+for (var i = 0; i < 10; i++){
+  console.log(i);
+}
