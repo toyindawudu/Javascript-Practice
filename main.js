@@ -463,3 +463,5 @@ for (var i = 0; i < toyin.length; i++) {
   if (typeof toyin[i] !== 'string') continue
   console.log (toyin [i]);
 }
+
+console.log(toyin);
