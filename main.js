@@ -479,23 +479,39 @@ for (var i = toyin.length - 1; i >= 0; i--) {
 
 // Coding Challenge 5 
 
-
-// var johnFamily;
-// var johnFamilyTips[];
-// var johnBills[];
-
-// johnBills = [124, 48, 268, 180, 42];
-
-// for ( var i = 0; i >= johnBills.length; i++) {
-// return tips;
-// }
-// console.log(johnBills);
-
 var john = {
   bills: [124, 48, 268, 180, 42],
-  calcTips: []
-  tips: [],
-  finalValues: [];
+  // Create a function for the tips
+  calcTips: function () {
+    this.tips = [];
+    this. finalvalues = [];
+
+    //create a control flow for the tips depending on the bill
+
+    for (var i = 0; i < john.bills.length; i++) {
+      
+      // create percentage based on tipping
+      
+      var billPercentage;
+      var bill = this.bills[i];
+
+      if (bill < 50) {
+        billPercentage = 20/100;
+      } else if (billPercentage >= 50 && billPercentage < 200) {
+        billPercentage = 15/100;
+      } else {
+        billPercentage = 10/100;
+      }
+
+      //Calculate and place the values in their respective arrays
+
+      this.tips[i] = bill * billPercentage;
+      this.finalvalues[i] = bill + bill * billPercentage;
+    }
+
+
+  }
 }
 
+john.calcTips();
 console.log(john);
