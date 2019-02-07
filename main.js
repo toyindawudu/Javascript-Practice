@@ -484,12 +484,12 @@ var john = {
   // Create a function for the tips
   calcTips: function () {
     this.tips = [];
-    this. finalvalues = [];
+    this. finalValues = [];
 
     //create a control flow for the tips depending on the bill
 
     for (var i = 0; i < john.bills.length; i++) {
-      
+
       // create percentage based on tipping
       
       var billPercentage;
@@ -506,12 +506,70 @@ var john = {
       //Calculate and place the values in their respective arrays
 
       this.tips[i] = bill * billPercentage;
-      this.finalvalues[i] = bill + bill * billPercentage;
+      this.finalValues[i] = bill + bill * billPercentage;
     }
-
-
   }
 }
 
 john.calcTips();
 console.log(john);
+
+var mark = {
+  bills: [77, 375, 110, 45],
+  // Create a function for the tips
+  calcTips: function () {
+    this.tips = [];
+    this. finalValues = [];
+
+    //create a control flow for the tips depending on the bill
+
+    for (var i = 0; i < mark.bills.length; i++) {
+
+      // create percentage based on tipping
+      
+      var billPercentage;
+      var bill = this.bills[i];
+
+      if (bill < 100) {
+        billPercentage = 20/100;
+      } else if (billPercentage >= 100 && billPercentage < 300) {
+        billPercentage = 10/100;
+      } else {
+        billPercentage = 25/100;
+      }
+
+      //Calculate and place the values in their respective arrays
+
+      this.tips[i] = bill * billPercentage;
+      this.finalValues[i] = bill + bill * billPercentage;
+    }
+  }
+}
+
+mark.calcTips();
+console.log(mark);
+
+// Calculate the average of a given array
+
+function calcAverage (tips) {
+  var sum = 0;
+
+// Sum up the total of the array
+
+  for (var i = 0; i <tips.length; i++) {
+    sum = sum + tips [i];
+  }
+  return sum / tips.length;
+}
+
+// calculate
+
+john.calcTips();
+mark.calcTips();
+
+
+john.average = john.calcAverage(john.tips);
+mark.average = mark.calcAverage(mark.tips);
+
+
+console.log(john, mark);
