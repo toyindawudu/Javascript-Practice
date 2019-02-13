@@ -568,8 +568,31 @@ john.calcTips();
 mark.calcTips();
 
 
-john.average = john.calcAverage(john.tips);
-mark.average = mark.calcAverage(mark.tips);
+// john.average = john.calcAverage(john.tips);
+// mark.average = mark.calcAverage(mark.tips);
 
 
 console.log(john, mark);
+
+
+//Object.create 
+// var personProto = {
+//   calculateAge: function (){
+//     console.log(2019 - this.yearOfBirth);
+//   }
+// };
+
+// var tosin = Object.create(personProto);
+// tosin.name = 'Tosin';
+// tosin.yearOfBirth = 1986;
+// tosin.job ='Banker';
+
+// var josiah = Object.create(personProto, {
+//   name: {value: 'Josiah'},
+//   yearOfBirth: {value: 2017},
+//   job: {value: 'Unemployed'}
+// });
+
+
+// Primitives vs. Objects
+
