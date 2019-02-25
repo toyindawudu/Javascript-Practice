@@ -596,3 +596,76 @@ console.log(john, mark);
 
 // Primitives vs. Objects
 
+
+// Primitives
+var a = 32;
+var b = a;
+
+a = 46;
+
+console.log (a, b);
+
+
+// Objects
+
+var obj1 = {
+  name: 'Toyin',
+  age: 32
+};
+
+var obj2 = obj1;
+obj2.age = 21;
+
+console.log (obj1.age, obj2.age);
+
+// Functions
+var age = 32;
+var obj = {
+  name: 'Toyin',
+  city: 'London'
+};
+
+function change(a,b) {
+  a = 33;
+  b.city = 'Bristol';
+}
+
+change(age, obj);
+
+console.log(age);
+console.log(obj.city);
+
+
+// Passing functions as arguements
+
+var years = [1990, 1993, 1998, 2005, 2018];
+
+function arrayCalc (arr, fn) {
+  var arrRes = [];
+  for (var i = 0; i < arr.length; i++) {
+    arrRes.push (fn(arr[i]));
+  }
+  return arrRes;
+}
+
+function calculateAge(el) {
+  return 2019 - el;
+}
+
+function isFullAge(el) {
+  return el >= 18;
+}
+
+function maxHeartRate (el) {
+  if (el >= 18 && el <= 81) {
+    return Math.round(260.9 - (0.67 * el));
+  } else {
+    return -1;
+  }
+  
+}
+
+var ages = arrayCalc(years, calculateAge);
+var fullAges = arrayCalc(ages, isFullAge);
+
+// console.log(ages, fullAges);
